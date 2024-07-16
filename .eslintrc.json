@@ -1,0 +1,66 @@
+{
+    "root": true,
+    "parserOptions": {
+        "ecmaVersion": 2020,
+        "project": "./tsconfig.json"
+    },
+    "parser": "@typescript-eslint/parser",
+    "plugins": ["@typescript-eslint"],
+    "env": {
+        "es6": true,
+        "node": true
+    },
+    "extends": [
+        "airbnb-base",
+        "eslint:recommended",
+        "plugin:@typescript-eslint/recommended",
+        "prettier"
+    ],
+    "rules": {
+        "no-param-reassign": 0,
+        // allow paren-less arrow functions
+        "arrow-parens": 0,
+        // allow async-await
+        "generator-star-spacing": 0,
+        "semi": ["error", "always"],
+        "comma-dangle": ["error", "only-multiline"],
+        "padded-blocks": 0,
+        "one-var": 0,
+        "no-return-assign": 0,
+        "no-shadow": 0,
+        "@typescript-eslint/no-shadow": "error",
+        // allow debugger during development
+        "no-debugger": 2,
+        "space-before-function-paren": 0,
+        "no-useless-call": 0,
+        "no-unused-expressions": 0,
+        "func-names": 0,
+        "prefer-rest-params": 0,
+        "max-len": 0,
+        "@html-eslint/require-doctype": 0,
+        "spaced-comment": 0,
+        "import/extensions": 0,
+        "import/no-unresolved": 0,
+        "max-classes-per-file": 0,
+        "class-methods-use-this": 0,
+        "import/prefer-default-export": 0,
+        "no-unused-vars": 0,
+        "quotes": [2, "single"],
+
+        // typeScript (https://typescript-eslint.io/rules)
+        "@typescript-eslint/prefer-ts-expect-error": "error", // 禁止使用 @ts-ignore
+        "@typescript-eslint/ban-ts-comment": "error", // 禁止 @ts-<directive> 使用注释或要求在指令后进行描述
+        "@typescript-eslint/no-inferrable-types": "error", // 可以轻松推断的显式类型可能会增加不必要的冗长
+        "@typescript-eslint/ban-types": "error", // 禁止使用特定类型
+        "@typescript-eslint/no-var-requires": "error", // 禁止使用 require() 函数导入模块
+        "@typescript-eslint/no-explicit-any": "error", // 禁止使用 any 类型
+        "@typescript-eslint/array-type": "error", // 数组声明必须使用 <type>[]
+        "@typescript-eslint/prefer-as-const": "error", // 禁止使用 <> 声明类型断言
+        "@typescript-eslint/consistent-type-imports": "error", // 一致类型导入
+        "@typescript-eslint/consistent-indexed-object-style": "error", // 一致索引对象样式
+        "@typescript-eslint/consistent-generic-constructors": "error", // 一致泛型构造函数
+        "@typescript-eslint/consistent-type-definitions": "error", // 一致的类型定义
+        "@typescript-eslint/prefer-nullish-coalescing": "error", // 一致的空合并运算符
+        "@typescript-eslint/indent": ["error", 4]
+    }
+}

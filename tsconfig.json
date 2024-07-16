@@ -1,0 +1,29 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "rootDir": ".",
+    "paths": {
+      "@vendor/*": ["./vendor/*"]
+    },
+    "target": "es2021",
+    "module": "commonjs",
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "strictPropertyInitialization": false,
+    "strict": true, // 严格模式
+    "strictNullChecks": true, // 严格空检查
+    "strictFunctionTypes": true, // 严格Function类型
+    "noImplicitAny": true,
+    "outDir": "out",
+    "sourceMap": false
+  },
+  "include": [
+    "./**/*.ts"
+  ],
+  "ts-node":{
+    "require": ["tsconfig-paths/register"],
+    "skipIgnore": true
+  }
+}
